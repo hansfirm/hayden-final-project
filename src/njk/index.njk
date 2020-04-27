@@ -1,22 +1,72 @@
 {% extends '_layouts/base.njk' %}
+{% set entry = data.discography[0] %}
+{% set entry = data.members[0] %}
 
-{% block page_title %}New index page title{% endblock %}
 
-{% block page_description %}The search description for this page goes here.{% endblock %}
+{% block page_title %}Queen Rock Band{% endblock %}
+
+{% block page_description %}The infamous, hard-rocking Queen band with singing icon Freddie Mercury and others.{% endblock %}
 
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      <h1>Main headline</h1>
-      <p>This is a <a href="detail-entry-example.html">link to a blog entry example</a> which shows a simple detail entry page example. It uses the "data-entry.njk" layout.</p>
-      <p>This is a <a href="detail-book-shipping-news.html">link to a book page example</a> which uses a more complex detail layout (detail-book.njk) where data is pulled into the layout and the page calls for a specific row in the data.</p>
-      <ul> 
-        {% for book in data.books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
+    <div class="col sm-8">
+      <h1>Queen</h1>
+      <img class="img-fluid" src="img/queen-band-early.jpg">
+
+      <!-- DESCRIPTION -->
+      <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+
+      <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in March 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
+
+      <p>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified eight times platinum in the US. Their performance at the 1985 Live Aid concert has been ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia - a complication of AIDS, and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.</p>
+
+      <p>Estimates of Queen's record sales range from 170 million to 300 million records, making them one of the world's best-selling music artists. In 1990, Queen received the Brit Award for Outstanding Contribution to British Music from the British Phonographic Industry. They were inducted into the Rock and Roll Hall of Fame in 2001. Each member has composed hit singles, and all four were inducted into the Songwriters Hall of Fame in 2003. In 2005, Queen received the Ivor Novello Award for Outstanding Song Collection from the British Academy of Songwriters, Composers, and Authors. In 2018, they were presented the Grammy Lifetime Achievement Award.</p>
+      <p> tool for seeing members w links</p>
+
+      <!--Member cards -->
+      {% for entry in data.members %}
+      <div class="card" style="width: 18rem;">
+        <img src="{{ entry.image }}" class="card-img-top" alt="Member">
+        <div class="card-body">
+          <h5 class="card-title">{{entry.name}}</h5>
+          <p class="card-text">{{entry.instruments}}</p>
+          <a href="{{ entry.url }}" class="btn btn-primary">History</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col sm-4>
+        <p>AQUI ESTAN LAS CANCIONES<p>
+        {% for entry in data.discography %}
+          <li>{{ entry.title }}, {{ entry.year }}</li> <img src="{{ entry.image }}" class="img-fluid">
+          </li>
         {% endfor %}
-     </ul>
     </div>
   </div>
 </div>
 {% endblock %}
+
+
+<<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  {% for entry in data.discography %}
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h3>{{entry.title}}, {{entry.year}}</h3>
+      <img src="{{ entry.image }} " class="d-block w-100" alt="Album">
+    </div>
+  {% endfor %}
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
