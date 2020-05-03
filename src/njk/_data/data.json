@@ -57,77 +57,92 @@
     {
       "title": "Queen",
       "year": 1973,
-      "image": "img/discs/Queen_Queen.png"
+      "image": "img/discs/Queen_Queen.png",
+      "number": 2
     },
     {
       "title": "Queen II",
       "year": 1974,
-      "image": "img/discs/Queen_Queen_II.jpg"
+      "image": "img/discs/Queen_Queen_II.jpg",
+      "number": 2
     },
     {
       "title": "Sheer Heart Attack",
       "year": 1974,
-      "image": "img/discs/Queen_Sheer_Heart_Attack.png"
+      "image": "img/discs/Queen_Sheer_Heart_Attack.png",
+      "number": 3
     },
     {
       "title": "A Night at the Opera",
       "year": 1975,
-      "image": "img/discs/Queen_A_Night_At_The_Opera.png"
+      "image": "img/discs/Queen_A_Night_At_The_Opera.png",
+      "number": 4
     },
     {
       "title": "A Day at the Races",
       "year": 1976,
-      "image": "img/discs/Queen_A_Day_at_the_Races.jpg"
+      "image": "img/discs/Queen_A_Day_at_the_Races.jpg",
+      "number": 5
     },
     {
       "title": "News of the World",
       "year": 1977,
-      "image": "img/discs/Queen_News_Of_The_World.png"
+      "image": "img/discs/Queen_News_Of_The_World.png",
+      "number": 6
     },
     {
       "title": "Jazz",
       "year": 1978,
-      "image": "img/discs/Queen_Jazz.png"
+      "image": "img/discs/Queen_Jazz.png",
+      "number": 7
     },
     {
       "title": "The Game",
       "year": 1980,
-      "image": "img/discs/Queen_The_Game.png"
+      "image": "img/discs/Queen_The_Game.png",
+      "number": 8
     },
     {
       "title": "Flash Gordon (Original Soundtrack)",
       "year": 1980,
-      "image": "img/discs/Queen_Flash_Gordon.png"
+      "image": "img/discs/Queen_Flash_Gordon.png",
+      "number": 9
     },
     {
       "title": "Hot Space",
       "year": 1982,
-      "image": "img/discs/Queen_Hot_Space.png"
+      "image": "img/discs/Queen_Hot_Space.png",
+      "number": 10
     },
     {
       "title": "The Works",
       "year": 1984,
-      "image": "img/discs/Queen_The_Works.png"
+      "image": "img/discs/Queen_The_Works.png",
+      "number": 11
     },
     {
       "title": "A Kind of Magic",
       "year": 1986,
-      "image": "img/discs/Queen_A_Kind_Of_Magic.png"
+      "image": "img/discs/Queen_A_Kind_Of_Magic.png",
+      "number": 12
     },
     {
       "title": "The Miracle",
       "year": 1989,
-      "image": "img/discs/Queen_The_Miracle.png"
+      "image": "img/discs/Queen_The_Miracle.png",
+      "number": 13
     },
     {
       "title": "Innuendo",
       "year": 1991,
-      "image": "img/discs/Queen_Innuendo.png"
+      "image": "img/discs/Queen_Innuendo.png",
+      "number": 14
     },
     {
       "title": "Made in Heaven",
       "year": 1995,
-      "image": "img/discs/Queen_Made_in_Heaven.jpg"
+      "image": "img/discs/Queen_Made_in_Heaven.jpg",
+      "number": 15
     }
   ]
 }

@@ -2,8 +2,23 @@
 
 .navbar {
   margin-bottom: 20px;
-  background-color: rgb(250, 209, 216);
+  background-color: navy;
+  font-family: 'New Rocker', cursive;
+  font-size: large;
 }
 .navbar a{
-  color: grey;
+  color: grey !important;
+}
+li {
+  margin-right: 120px;
+}
+.navbar-brand {
+  margin-right: 120px;
+  font-size: larger;
+}
+.dropdown-menu {
+  background-color: navy;
+}
+.navbar-toggle .collapsed {
+  background-color: rgb(200, 255, 0) !important;
 }

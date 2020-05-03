@@ -20,3 +20,15 @@
 
 // Import partials
 @import "nav";
+
+//Base styles for any page
+body{
+  background-color: rgb(250, 209, 216);
+  color: grey;
+}
+h1, h3, h4{
+  font-family: 'New Rocker', cursive;
+}
+p {
+  font-family: 'Times New Roman', Times, serif;
+}
