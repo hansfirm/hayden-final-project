@@ -25,30 +25,35 @@
     </div>
     <div class="col-sm-4">
       <h1>Discography</h1>
-      <div class="overflow-auto">
+      <div id="disc" class="overflow-auto">
+      <ul>
         {% for entry in data.discography %}
-          <h3> {{ entry.title }}, {{ entry.year }}: </h3>
-          <img src="{{ entry.image }}" class="d-block w-100" alt="Album">
-        {% end for%}
+          <li>
+            <h5> {{ entry.title }}, {{ entry.year }}: <h5>
+            <img src="{{ entry.image }}" class="d-block w-100" alt="Album">
+          </li>
+        {% endfor%}
+      </ul>
       </div>
     </div>
   </div>
 
-
-    
-  </div>
-  <div class="col-sm-6">
-    <!--Member cards -->
-    {% for entry in data.members %}
-    <div class="card">
-      <img src="{{ entry.image }}" class="img-fluid" class="card-img-top" alt="Member">
-      <div class="card-body">
-        <h5 class="card-title">{{entry.name}}</h5>
-        <p class="card-text">{{entry.instruments}}</p>
-        <a href="{{ entry.url }}" class="btn btn-primary">History</a>
-      </div>
-    </div>
-    {% endfor %}
+  
+      <!--Member cards -->
+      <h1>Members</h1>
+      <div class="row">
+      {% for entry in data.members %}
+        <div class="col-sm-3">
+        <div class="card">
+          <img src="{{ entry.image }}" class="img-fluid" class="card-img-top" alt="Member">
+          <div class="card-body">
+          <h5 class="card-title">{{entry.name}}</h5>
+          <p class="card-text">{{entry.instruments}}</p>
+          <a href="{{ entry.url }}" class="btn btn-primary">History</a>
+          </div>
+        </div>
+        </div>
+      {% endfor %}
   </div>
 </div>
 {% endblock %}

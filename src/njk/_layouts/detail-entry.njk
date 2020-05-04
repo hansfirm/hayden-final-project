@@ -6,24 +6,26 @@
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-4">
       {% block info %}
         <h1>{{entry.name}}</h1>
         <img src="{{ entry.imagebw }}" alt="{{ entry.name }}" class="img-fluid">
-        <h3>Quick Facts</h3>
-        <ul>
+  {% endblock %}
+    </div>
+      {% block story %}
+    <div class="col-sm-8">
+      <h1>Biography</h1>
+      <div id="bio" class="overflow-auto">
+        <p>{{entry.text}}</p>
+        <p> source: <a href="{{ entry.source }}">Wikipedia</a></p>
+      </div>
+      <h1>Quick Facts</h3>
+        <ul id="quickfacts">
           <li>Instruments: {{entry.instruments}}</li>
           <li>Band Tenure: {{entry.tenure}}</li>
           <li>Birthplace: {{entry.birthplace}}</li>
           <li>Born: {{entry.birthdate}}</li>
         </ul>
-{% endblock %}
-    </div>
-    <div class="col-sm-4">
-      {% block story %}
-        <h1>Biography</h1>
-        <p>{{entry.text}}</p>
-        <p> source: <a href="{{ entry.source }}">Wikipedia</a></p>
       {% endblock %}
     </div>
   </div>
