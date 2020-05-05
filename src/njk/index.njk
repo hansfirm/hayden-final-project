@@ -1,6 +1,4 @@
 {% extends '_layouts/base.njk' %}
-{% set entry = data.discography[0] %}
-{% set entry = data.members[0] %}
 
 
 {% block page_title %}Queen Rock Band{% endblock %}
@@ -15,7 +13,7 @@
       <img class="img-fluid" src="img/queen-band-early.jpg">
 
       <!-- DESCRIPTION -->
-      <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+      <p id="pmargin">Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals, piano), Brian May (guitar, vocals), Roger Taylor (drums, vocals) and John Deacon (bass). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
 
       <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in March 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
 
@@ -26,34 +24,27 @@
     <div class="col-sm-4">
       <h1>Discography</h1>
       <div id="disc" class="overflow-auto">
-      <ul>
         {% for entry in data.discography %}
-          <li>
-            <h5> {{ entry.title }}, {{ entry.year }}: <h5>
-            <img src="{{ entry.image }}" class="d-block w-100" alt="Album">
-          </li>
+          <h5 id="albumtitle"> {{ entry.title }}, {{ entry.year }}: <h5>
+          <img src="{{ entry.image }}" class="d-block w-100" alt="Album">
         {% endfor%}
-      </ul>
+      </div>
+      <br>
+      <h1>Members</h1>
+      <div id="members" class="overflow-auto">
+        {% for entry in data.members %}
+          <div class="card">
+          <img id="cardimages" src="{{ entry.image }}" class="card-img-top img-fluid" alt="Member">
+            <div class="card-body">
+              <h5 class="card-title">{{entry.name}}</h5>
+              <p class="card-text">{{entry.instruments}}</p>
+              <a href="{{ entry.url }}" class="btn btn-primary">History</a>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
       </div>
     </div>
-  </div>
-
-  
-      <!--Member cards -->
-      <h1>Members</h1>
-      <div class="row">
-      {% for entry in data.members %}
-        <div class="col-sm-3">
-        <div class="card">
-          <img src="{{ entry.image }}" class="img-fluid" class="card-img-top" alt="Member">
-          <div class="card-body">
-          <h5 class="card-title">{{entry.name}}</h5>
-          <p class="card-text">{{entry.instruments}}</p>
-          <a href="{{ entry.url }}" class="btn btn-primary">History</a>
-          </div>
-        </div>
-        </div>
-      {% endfor %}
   </div>
 </div>
 {% endblock %}
