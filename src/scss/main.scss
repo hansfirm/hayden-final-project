@@ -44,13 +44,13 @@ p, h5{
 }
 .card-body{
   background-color: grey;
-  color: pink;
+  color: rgb(250, 209, 216);
 }
 .btn{
-  color: pink;
+  color: rgb(250, 209, 216);
   background-color: navy;
   font-family: 'Times New Roman', Times, serif;
-  outline: pink;
+  outline: rgb(250, 209, 216);
 }
 #bio.overflow-auto {
   max-width: fit-content;
@@ -85,4 +85,10 @@ p, h5{
   height: 15vw;
   object-fit: cover;
   object-position: top;
+}
+.table {
+  margin-left: 80px;
+  background-color: grey;
+  color:rgb(250, 209, 216);
+  font-family: 'Times New Roman', Times, serif;
 }
