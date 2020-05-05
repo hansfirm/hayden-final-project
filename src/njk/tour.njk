@@ -1,0 +1,33 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}Queen Tour{% endblock %}
+
+{% block page_description %}Queen's tour dates, locations and venues.{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Stop poop</th>
+          <th scope="col">Date</th>
+          <th scope="col">City</th>
+          <th scope="col">Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for entry in tour.tourdates %}
+      {% set entry = tour.tourdates[{{entry.number}}] %}
+        <tr>
+          <th scope="row">{{entry.realnumber}}</th>
+          <td>{{entry.date}}</td>
+          <td>{{entry.city}}</td>
+          <td>{{entry.venue}}</td>
+        </tr>
+      {% endfor%}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
