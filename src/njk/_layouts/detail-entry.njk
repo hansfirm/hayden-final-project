@@ -6,20 +6,20 @@
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-3" style="padding-top: 5px;">
       {% block info %}
         <h2>{{entry.name}}</h2>
         <img src="{{ entry.imagebw }}" alt="{{ entry.name }}" class="img-fluid">
   {% endblock %}
     </div>
       {% block story %}
-    <div class="col-sm-6">
+    <div class="col-sm-6" style="padding-top: 5px;">
       <h2>Biography</h2>
       <div id="bio" class="overflow-auto">
         <p>{{entry.text | safe}}</p>
       </div>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-3" style="padding-top: 5px;">
       <h2>Quick Facts</h2>
         <ul id="quickfacts">
           <li><strong>Instruments</strong>: {{entry.instruments}}</li>
